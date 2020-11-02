@@ -7,9 +7,8 @@
 // const octiconIcon = require("./src/utils/octicon-icon");
 
 module.exports = {
-  siteName: "Gridsome Blog Starter",
-  siteDescription:
-    "A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.",
+  siteName: "@bongnv",
+  siteDescription: "The blog of Bong.",
 
   // templates: {
   //   Post: "/:title",

@@ -1,7 +1,7 @@
 <template>
-  <Layout>
-    <article class="w-full max-w-2xl content" v-html="$page.post.content" />
-  </Layout>
+  <main class="w-full flex justify-center">
+    <div class="w-full max-w-2xl content" v-html="$page.post.content" />
+  </main>
 </template>
 
 <page-query>
