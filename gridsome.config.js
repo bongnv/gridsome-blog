@@ -30,15 +30,21 @@ module.exports = {
         },
       },
     },
-  ],
 
-  transformers: {
-    //Add markdown support to all file-system sources
-    remark: {
-      externalLinksTarget: "_blank",
-      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
-      anchorClassName: "icon icon-link",
-      plugins: ["@gridsome/remark-prismjs"],
+    "gridsome-plugin-tailwindcss",
+
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        cacheTime: 600000, // default
+      },
     },
-  },
+
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-11696168-2",
+      },
+    },
+  ],
 };
