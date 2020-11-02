@@ -4,32 +4,57 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+// const octiconIcon = require("./src/utils/octicon-icon");
+
 module.exports = {
   siteName: "Gridsome Blog Starter",
   siteDescription:
     "A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.",
 
-  templates: {
-    Post: "/:title",
-    Tag: "/tag/:id",
-  },
+  // templates: {
+  //   Post: "/:title",
+  //   Tag: "/tag/:id",
+  // },
 
   plugins: [
     {
-      // Create posts from markdown files
       use: "@gridsome/source-filesystem",
       options: {
-        typeName: "Post",
-        path: "content/posts/*.md",
-        refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: "Tag",
-            create: true,
-          },
+        baseDir: "./content",
+        path: "*.md",
+        typeName: "BlogPage",
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["noopener", "noreferrer"],
         },
       },
     },
+
+    // {
+    //   use: "@gridsome/source-filesystem",
+    //   options: {
+    //     baseDir: "./content",
+    //     path: "blog/**/*.md",
+    //     typeName: "BlogPost",
+    //     index: ["index", "readme"],
+    //     refs: {
+    //       // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+    //       tags: {
+    //         typeName: "Tag",
+    //         create: true,
+    //       },
+    //     },
+    //     remark: {
+    //       externalLinksTarget: "_blank",
+    //       externalLinksRel: ["noopener", "noreferrer"],
+    //       plugins: ["@gridsome/remark-prismjs"],
+    //       autolinkHeadings: {
+    //         behavior: "append",
+    //         content: octiconIcon,
+    //       },
+    //     },
+    //   },
+    // },
 
     "gridsome-plugin-tailwindcss",
 
