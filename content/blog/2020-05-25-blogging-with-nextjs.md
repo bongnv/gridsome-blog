@@ -1,7 +1,7 @@
 ---
 title: Create a blazing fast blog via NextJS
 date: 2020-05-25
-description: NextJS gives me more control as well as more configurations to optimize the blog. The post here describes how I created a blog via NextJS which helped me to improve the speed of the site from 1.8s FCP to 1.6s FCP.
+excerpt: NextJS gives me more control as well as more configurations to optimize the blog. The post here describes how I created a blog via NextJS which helped me to improve the speed of the site from 1.8s FCP to 1.6s FCP.
 published: true
 tags: ["nextjs", "react", "jamstack"]
 ---

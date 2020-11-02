@@ -1,7 +1,7 @@
 <template>
   <nav class="flex flex-col justify-start px-1x border-b border-divider shadow">
-    <router-link to="/" class="pl-.5x mt-1x font-medium">About</router-link>
-    <router-link to="/blog/" class="pl-.5x mt-1x font-medium">Blog</router-link>
+    <g-link to="/" class="pl-.5x mt-1x font-medium">About</g-link>
+    <g-link to="/blog/" class="pl-.5x mt-1x font-medium">Blog</g-link>
     <div class="flex pl-.5x mb-1x mt-1x pt-1x border-t border-divider">
       <x-link :href="links.linkedin" class="mr-1x">
         <LinkedInIcon />

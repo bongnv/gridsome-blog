@@ -1,7 +1,7 @@
 ---
 title: Releases with Semantic-release
 date: 2020-05-03
-description: I used semantic-release to speed up the handy work when publishing npm packages.
+excerpt: I used semantic-release to speed up the handy work when publishing npm packages.
 published: true
 tags: ["npm", "semantic-release", "javascript"]
 ---

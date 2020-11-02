@@ -9,6 +9,7 @@ const octiconIcon = require("./src/utils/octicon-icon");
 module.exports = {
   siteName: "@bongnv",
   siteDescription: "The blog of Bong.",
+  siteUrl: "https://bongnv.com",
 
   settings: {
     author: "Bong Nguyen",

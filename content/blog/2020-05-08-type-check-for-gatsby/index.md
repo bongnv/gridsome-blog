@@ -1,7 +1,7 @@
 ---
 title: Type checking for Gatsby with TypeScript
 date: 2020-05-08
-description: I was looking for TypeScript support in Gatsby and fortunately there is native one which is ongoingly built by the Gatsby team. I then find it simple and would like to share it here for those who are looking for it.
+excerpt: I was looking for TypeScript support in Gatsby and fortunately there is native one which is ongoingly built by the Gatsby team. I then find it simple and would like to share it here for those who are looking for it.
 published: true
 tags: ["react", "gatsby", "typescript"]
 ---

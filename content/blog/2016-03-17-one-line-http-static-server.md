@@ -1,7 +1,7 @@
 ---
 title: "One-line HTTP Static Server"
 date: 2016-03-17
-description: Start a local HTTP static server with one line command.
+excerpt: Start a local HTTP static server with one line command.
 published: true
 ---
 

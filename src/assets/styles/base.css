@@ -36,6 +36,6 @@ html[lights-out] .moon {
   background: #b3d4fc;
 }
 
-nav .router-link-exact-active {
+nav .active--exact {
   @apply text-primary font-bold;
 }

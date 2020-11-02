@@ -10,4 +10,17 @@ module.exports = function (api) {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
     addMetadata("settings", require("./gridsome.config").settings);
   });
+
+  api.onCreateNode((options) => {
+    if (
+      options.internal.typeName === "BlogPost" &&
+      process.env.NODE_ENV === "production" &&
+      !options.published
+    ) {
+      // return null to filter it out
+      return null;
+    }
+
+    return options;
+  });
 };

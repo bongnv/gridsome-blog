@@ -1,7 +1,7 @@
 ---
 title: I patched a npm package
 date: 2020-04-30 14:27:00
-description: The post gives a convenient way to patch a npm package for personal usage.
+excerpt: The post gives a convenient way to patch a npm package for personal usage.
 published: true
 tags: ["npm", "javascript"]
 ---
