@@ -43,10 +43,6 @@
   @apply underline;
 }
 
-.content .heading-anchor {
-  @apply fill-current;
-}
-
 .content blockquote {
   @apply px-1x border-l-4 border-primary mb-1x;
 }

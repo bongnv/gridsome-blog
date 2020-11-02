@@ -5,3 +5,19 @@
 .card-transition-effect:hover {
   @apply transition duration-500 ease-in-out transform shadow-lg -translate-y-2;
 }
+
+.content .octicon {
+  @apply inline-block ml-1 invisible fill-current;
+}
+
+.content h2:hover .octicon {
+  @apply visible;
+}
+
+.content h3:hover .octicon {
+  @apply visible;
+}
+
+.content h4:hover .octicon {
+  @apply visible;
+}
