@@ -8,14 +8,18 @@
       Tags
     </h3>
     <ul class>
-      <li v-for="{ tag, count } in tags" :key="tag" class="inline-block m-1">
-        <router-link
+      <li
+        v-for="{ tag, path, count } in tags"
+        :key="tag"
+        class="inline-block m-1"
+      >
+        <g-link
           :class="{
             'block rounded p-1 bg-inline-surface': true,
             'font-bold text-primary': tag === currentTag,
           }"
-          :to="`/tags/${tag}`"
-          >{{ `${tag} (${count})` }}</router-link
+          :to="path"
+          >{{ `${tag} (${count})` }}</g-link
         >
       </li>
     </ul>
@@ -50,6 +54,7 @@ export default {
     tags() {
       return this.$static.tags.edges.map((edge) => ({
         tag: edge.node.id,
+        path: edge.node.path,
         count: edge.node.belongsTo.totalCount,
       }));
     },

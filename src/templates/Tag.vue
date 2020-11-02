@@ -1,20 +1,11 @@
 <template>
-  <Layout>
-    <h1 class="tag-title text-center space-bottom"># {{ $page.tag.title }}</h1>
-
-    <div class="posts">
-      <PostCard
-        v-for="edge in $page.tag.belongsTo.edges"
-        :key="edge.node.id"
-        :post="edge.node"
-      />
-    </div>
-  </Layout>
+  <PostList :title="title" :posts="posts" :tag="tag.id" />
 </template>
 
 <page-query>
 query Tag ($id: ID!) {
   tag (id: $id) {
+    id
     title
     belongsTo {
       edges {
@@ -35,14 +26,27 @@ query Tag ($id: ID!) {
 </page-query>
 
 <script>
-import PostCard from "~/components/PostCard.vue";
+import PostList from "../components/PostList.vue";
 
 export default {
   components: {
-    PostCard,
+    PostList,
   },
-  metaInfo: {
-    title: "Hello, world!",
+  metaInfo() {
+    return {
+      title: this.title,
+    };
+  },
+  computed: {
+    title() {
+      return `Tagged in ${this.tag.title}`;
+    },
+    tag() {
+      return this.$page.tag;
+    },
+    posts() {
+      return this.tag.belongsTo.edges.map((edge) => edge.node);
+    },
   },
 };
 </script>
