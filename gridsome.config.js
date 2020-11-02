@@ -4,16 +4,15 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-// const octiconIcon = require("./src/utils/octicon-icon");
+const octiconIcon = require("./src/utils/octicon-icon");
 
 module.exports = {
   siteName: "@bongnv",
   siteDescription: "The blog of Bong.",
 
-  // templates: {
-  //   Post: "/:title",
-  //   Tag: "/tag/:id",
-  // },
+  templates: {
+    Tag: "/tag/:id",
+  },
 
   plugins: [
     {
@@ -29,31 +28,30 @@ module.exports = {
       },
     },
 
-    // {
-    //   use: "@gridsome/source-filesystem",
-    //   options: {
-    //     baseDir: "./content",
-    //     path: "blog/**/*.md",
-    //     typeName: "BlogPost",
-    //     index: ["index", "readme"],
-    //     refs: {
-    //       // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-    //       tags: {
-    //         typeName: "Tag",
-    //         create: true,
-    //       },
-    //     },
-    //     remark: {
-    //       externalLinksTarget: "_blank",
-    //       externalLinksRel: ["noopener", "noreferrer"],
-    //       plugins: ["@gridsome/remark-prismjs"],
-    //       autolinkHeadings: {
-    //         behavior: "append",
-    //         content: octiconIcon,
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        baseDir: "./content",
+        path: "blog/**/*.md",
+        typeName: "BlogPost",
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: "Tag",
+            create: true,
+          },
+        },
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["noopener", "noreferrer"],
+          plugins: ["@gridsome/remark-prismjs"],
+          autolinkHeadings: {
+            behavior: "append",
+            content: octiconIcon,
+          },
+        },
+      },
+    },
 
     "gridsome-plugin-tailwindcss",
 
