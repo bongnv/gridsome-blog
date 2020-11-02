@@ -1,0 +1,41 @@
+body {
+  @apply bg-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+strong,
+body a,
+li,
+svg,
+svg * {
+  @apply text-foreground;
+}
+
+html[lights-out] .sun {
+  @apply hidden;
+}
+
+html[lights-out] .moon {
+  @apply block;
+}
+
+.moon {
+  @apply hidden;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+}
+
+::selection {
+  background: #b3d4fc;
+}
+
+nav .router-link-exact-active {
+  @apply text-primary font-bold;
+}

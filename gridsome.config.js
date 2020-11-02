@@ -10,6 +10,16 @@ module.exports = {
   siteName: "@bongnv",
   siteDescription: "The blog of Bong.",
 
+  settings: {
+    author: "Bong Nguyen",
+    links: {
+      linkedin: "https://linkedin.com/in/bongnv",
+      github: "https://github.com/bongnv",
+      source: "https://github.com/bongnv/blog",
+      email: "mailto:vanbong@gmail.com",
+    },
+  },
+
   templates: {
     Tag: "/tag/:id",
   },

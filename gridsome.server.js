@@ -6,7 +6,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource(() => {
-    // Use the Data store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(({ addMetadata }) => {
+    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+    addMetadata("settings", require("./gridsome.config").settings);
   });
 };

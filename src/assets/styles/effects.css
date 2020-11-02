@@ -1,0 +1,7 @@
+.card-transition-effect {
+  @apply shadow;
+}
+
+.card-transition-effect:hover {
+  @apply transition duration-500 ease-in-out transform shadow-lg -translate-y-2;
+}
