@@ -26,7 +26,6 @@
       date(format: "D. MMMM YYYY")
       timeToRead
       content
-      path
       headings {
         anchor
         depth
@@ -36,6 +35,7 @@
         id
         path
       }
+      excerpt
     }
   }
 </page-query>
