@@ -9,6 +9,6 @@ I'm from Ninh Binh, Vietnam. Currently I work at Grab as a lead software enginee
 
 My focus is on distributed systems in [Go](https://golang.org/) programing language. Meanwhile, I'm also interested in frontend technologies for building blogs like my personal one. In general, I like to write codes and to solve problems that have impacts on people's lives.
 
-Beside, here is my wife & me:
+And, here is my wife & me:
 
 ![Profile picture](./profile.png)

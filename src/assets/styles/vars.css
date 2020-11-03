@@ -3,7 +3,7 @@
   --color-foreground: theme("colors.gray.900");
   --color-primary: theme("colors.indigo.600");
   --color-surface: theme("colors.gray.200");
-  --color-inline-surface: theme("colors.gray.300");
+  --color-inline-surface: theme("colors.gray.200");
   --color-divider: theme("colors.gray.300");
   --color-red: theme("colors.red.700");
   --color-pink: theme("colors.pink.700");
@@ -20,7 +20,7 @@ html[lights-out] {
   --color-foreground: theme("colors.gray.100");
   --color-primary: theme("colors.indigo.400");
   --color-surface: theme("colors.gray.800");
-  --color-inline-surface: theme("colors.gray.700");
+  --color-inline-surface: theme("colors.gray.800");
   --color-divider: theme("colors.gray.700");
   --color-red: theme("colors.red.300");
   --color-pink: theme("colors.pink.300");

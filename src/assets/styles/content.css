@@ -50,3 +50,28 @@
 .content svg {
   @apply inline-block;
 }
+
+.content table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+/* .content table th {
+  font-weight: 600;
+} */
+
+.content table td,
+.content table th {
+  padding: 6px 13px;
+  border: 1px solid var(--color-divider);
+}
+
+.content table tr {
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-divider);
+}
+
+/* .content table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+} */
