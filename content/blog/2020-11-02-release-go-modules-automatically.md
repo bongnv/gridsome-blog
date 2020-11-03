@@ -31,7 +31,36 @@ We all want our modules are released with its best in quality. The only way to a
 
 ## Setup semantic-release
 
-TBD
+### Configuration
+
+For Node modules, we can straightly use the default configuration. For Go modules, it requires some modifications. Thus, we will need to add `.releaserc.json`, which is `semantic-release`'s configure file to the root folder in our repository:
+```json
+{
+  "branches": [
+    "main",
+    {
+      "name": "beta",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github"
+  ]
+}
+```
+There are few things I would like to highlight here:
+
+- `@semantic-release/npm` is removed from the default `plugins` config because we don't need to publish our Go module to NPM repo. It's obvious, right?
+- `main` is used instead of `master` which is the release branch by default. For those who may not know, Github recently renames the default branch from `master` to `main`. [Reference](https://github.com/github/renaming).
+- `beta` is used for pre-release branch when we in heavy development phase with frequent breaking changes. To learn more about release workflow, you can look into [`semantic-release` wiki](https://semantic-release.gitbook.io/semantic-release/usage/workflow-configuration). I'm really impressed by how well it's documented.
+
+For generating changelog, we will need to include two more plugsin:
+- [`@semantic-release/changlog`](https://github.com/semantic-release/changelog): to generate the changelog file. By default, it's `CHANGELOG.md`.
+- [`@semantic-release/git`](https://github.com/semantic-release/git): to commit the generated changelog file to the repository.
+
+I don't see `CHANGELOG.md` to scale well and we already have git history so not including these steps make things easier.
 
 ## Pre-releases
 

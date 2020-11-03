@@ -52,6 +52,7 @@
 }
 
 .content table {
+  @apply text-foreground;
   display: block;
   width: 100%;
   overflow: auto;
