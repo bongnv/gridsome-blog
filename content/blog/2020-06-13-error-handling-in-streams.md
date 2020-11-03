@@ -16,11 +16,13 @@ What is error when consuming?
 How does it happen?
 
 ### Why we should handle error?
+
 How does it impact?
 => Why we should handle it?
- What is the problem hand handling it
+What is the problem hand handling it
 
 ## How to handle errors?
+
 Errors can come from many cases, it could come from bad codes or some dependency errors like DB or networks. The easiest approach is to skip those errors if possible. However, most of the time, we need to handle the error gracefully.
 
 ### In memory retry
@@ -28,8 +30,11 @@ Errors can come from many cases, it could come from bad codes or some dependency
 I would say this approach is quite straight forward. All we need is just an in-memory retry and good back-off mechanism.
 
 ### Failure queue to offload
+
 #### How to implement?
+
 #### Pros?
+
 #### Cons?
 
 ### Summary

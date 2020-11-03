@@ -14,15 +14,28 @@ Below is my experience when trying to automate the process of releasing Go modul
 ## Prerequisites
 
 ### Commit message format
-Your commit messages format must follow a convention which is understood by `semantic-release`. By default `semantic-release` uses [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) but it can be changed by configuration.
+
+Our commit messages format must follow a convention which is understood by `semantic-release`. By default `semantic-release` uses [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) but it can be changed by configuration.
 
 Here is an example of the release type that will be done based on a commit messages:
 
-| Commit message                                                                                                                                                                                   | Release type               |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | Patch Release              |
+| Commit message                                                                                                                                                                                   | Release type             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ |
+| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | Patch Release            |
 | `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | Minor (Feature) Release  |
 | `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | Major (Breaking) Release |
+
+### Automated tests
+
+We all want our modules are released with its best in quality. The only way to achieve that is to take testing seriously. Since releasing is done automatically, so be testing. Therefore, I would assume tha CI is already implemented with a proper automated testing. And we will only trigger the release step if all test cases are passed.
+
+## Setup semantic-release
+
+TBD
+
+## Pre-releases
+
+TBD
 
 ## Summary
 
